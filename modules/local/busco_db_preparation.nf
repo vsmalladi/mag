@@ -27,7 +27,6 @@ process BUSCO_DB_PREPARATION {
 
     script:
     """
-    f="$(basename -- ${database})"
-    tar -xf ${database} -s /^$f/buscodb/
+    tar -xf ${database} -s /^${database.simpleName}/buscodb/
     """
 }
