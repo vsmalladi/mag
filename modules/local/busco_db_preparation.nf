@@ -27,6 +27,7 @@ process BUSCO_DB_PREPARATION {
 
     script:
     """
+    set -e
     mkdir buscodb
     tar -xf ${database} -C buscodb
     """
