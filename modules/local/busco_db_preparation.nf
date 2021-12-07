@@ -22,13 +22,13 @@ process BUSCO_DB_PREPARATION {
     path database
 
     output:
-    path "buscodb/*", emit: db
+    path "*.tar.gz", emit: db
     path database
 
     script:
     """
     set -e
     mkdir buscodb
-    tar -xf ${database} -C buscodb
+    tar -xf ${database}
     """
 }
